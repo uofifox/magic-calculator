@@ -37,11 +37,11 @@ $(function(){
         var day = $('#day').val();
         var year = $('#year').val();
         var month = $('#month').val();
-        var currentDate = new Date(year, month, day);
+        var currentDate = new Date(year, month, day, 2);
         
         debugger;
-        $.each(dateSet, function(index, element){
-            var newDate = new Date(year,month, day);
+        $.each(dateSet, function(index, element) {
+            var newDate = new Date(year,month, day, 2);
             newDate.setTime(currentDate.getTime() - element.value * 86400000);
             var dateDisplay = (newDate.getMonth() + 1) + '/' + newDate.getDate() + '/' + newDate.getFullYear();
             $('#' + element.value).text(dateDisplay);            
