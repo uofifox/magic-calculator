@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PS Calculator 10.0</title>
+
+    <meta name="Description" content="The PS (Planning Strategy) Calculator for Disney Reservations lets you enter in a Date and it tells you when and where you can make your PS times at Walt Disney World.">
+    <meta name="Keywords" content="Walt Disney World, vacation planning, PS, priority seating, dining, reservations, dinner shows, lunch, character breakfast, WDW, theme parks, resorts, Orlando">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  </head>  
+  <body bgcolor="#34699E">
+        
+    <!-- Begin Page Table -->
+    <table width="751" border="0" cellspacing="1" cellpadding="3">
+      <tbody>
+        <tr valign="top" bgcolor="#000000"> 
+          <td> 
+    
+            <!--Side Menu Table-->
+            <table border="0" cellspacing="0" cellpadding="5">
+            
+              <!-- Sidebar Menu --> 
+              <tbody>
+                <tr>
+                  <td width="120" bgcolor="#FFCC00" valign="top"></td>        
+                    <!--Main Page--> 
+                  <td width="650" bgcolor="#FFFFFF" valign="top">
+  
+                    <!-- Main Page Header --> 
+                    <table border="0" cellspacing="0" cellpadding="3">
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div align="center">        
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <br>
+                    <br>
+                  </td>
+                </tr>
+                <tr bgcolor="#CC0033"> 
+                  <td valign="middle">
+                    <div align="center"><font color="#FFFF00" face="arial" size="3"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><b>Select a Month, Day &amp; Year Below then Press the CALC Button</b></font></font></div>
+                      <font color="#FFFF00" face="arial" size="3"></font>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+        
+            <!--MAIN PAGE TEXT-->
+            
+            <div align="center">
+    
+              <!-- Select the Month, Day and Year of PS Date -->
+              
+              <form method="post" action="/pscalc.php">
+              
+                <font size="4">
+                <select id="month" type="text" name="sMth">
+                <option value="0">1
+                </option><option value="1">2
+                </option><option value="2">3
+                </option><option value="3">4
+                </option><option value="4">5
+                </option><option value="5">6
+                </option><option value="6">7
+                </option><option value="7">8
+                </option><option value="8">9
+                </option><option value="9">10
+                </option><option value="10">11
+                </option><option value="11">12
+                </option></select>
+                &nbsp;/&nbsp;
+                
+                <select id="day" type="text" name="sDay">
+                <option value="1">1
+                </option><option value="2">2
+                </option><option value="3">3
+                </option><option value="4">4
+                </option><option value="5">5
+                </option><option value="6">6
+                </option><option value="7">7
+                </option><option value="8">8
+                </option><option value="9">9
+                </option><option value="10">10
+                </option><option value="11">11
+                </option><option value="12">12
+                </option><option value="13">13
+                </option><option value="14">14
+                </option><option value="15">15
+                </option><option value="16">16
+                </option><option value="17">17
+                </option><option value="18">18
+                </option><option value="19">19
+                </option><option value="20">20
+                </option><option value="21">21
+                </option><option value="22">22
+                </option><option value="23">23
+                </option><option value="24">24
+                </option><option value="25">25
+                </option><option value="26">26
+                </option><option value="27">27
+                </option><option value="28">28
+                </option><option value="29">29
+                </option><option value="30">30
+                </option><option value="31">31
+                </option></select>
+                &nbsp;/&nbsp;
+                
+                <select id="year" type="text" name="sYr">
+                <option value="2017">2017</option>
+                </option><option value="2018">2018
+                </option><option value="2019">2019
+                </option><option value="2020">2020
+                </option><option value="2021">2021
+                </option><option value="2022">2022
+                </option></select>
+                
+                <input type="Submit" name="submit" value="Calc">
+                </font>
+              </form>
+        
+              <!-- Display PS Call Date for Date Submitted -->
+                
+              <table class="table table-striped">
+                <tbody>
+                  <tr><td><font size="3" color="#FF0000">You can make your 499 Day Advanced Reservations on</font></td><th id="499" bgcolor="#FFFFFF" scope="row"></th></tr>
+                  <tr><td><font size="3" color="#FF0000">You can make your 180 Day Advanced Reservations on</font></td><th id="180" bgcolor="#FFFFFF" scope="row"></th></tr>
+                  <tr><td><font size="3" color="#FF0000">You can make your 120 Day Advanced Reservations on</font></td><th id="120" bgcolor="#FFFFFF" scope="row"></th></tr>
+                  <tr><td><font size="3" color="#FF0000">You can make your 105 Day Advanced Reservations on</font></td><th id="105" bgcolor="#FFFFFF" scope="row"></th></tr>
+                  <tr><td><font size="3" color="#FF0000">You can make your  90 Day Advanced Reservations on</font></td><th id="90" bgcolor="#FFFFFF" scope="row"></th></tr>
+                  <tr><td><font size="3" color="#FF0000">You can make your  75 Day Advanced Reservations on</font></td><th id="75" bgcolor="#FFFFFF" scope="row"></th></tr>
+                  <tr><td><font size="3" color="#FF0000">You can make your  60 Day Advanced Reservations on</font></td><th id="60" bgcolor="#FFFFFF" scope="row"></th></tr>
+                  <tr><td><font size="3" color="#FF0000">You can make your  45 Day Advanced Reservations on</font></td><th id="45" bgcolor="#FFFFFF" scope="row"></th></tr>
+                  <tr><td><font size="3" color="#FF0000">You can make your  30 Day Advanced Reservations on</font></td><th id="30" bgcolor="#FFFFFF" scope="row"></th></tr>
+                </tbody>
+              </table>
+          
+              <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+              <script src="site.js" type="text/javascript"></script>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFCC00">
+            <font color="#FFCC00">space</font>
+          </td>
+        </tr>
+    
+    
+          <!-- End of Page Table -->
+      </tbody>
+    </table>
+            
+        <!-- End of Border Table -->
+  </body>
+</html>
