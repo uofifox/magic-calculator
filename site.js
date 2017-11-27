@@ -32,7 +32,7 @@ $(function(){
     ]
 
 
-    $('input').on('click', function (event){
+    $('button').on('click', function(event) {
         event.preventDefault();
         var day = $('#day').val();
         var year = $('#year').val();
@@ -42,8 +42,8 @@ $(function(){
         debugger;
         $.each(dateSet, function(index, element){
             var newDate = new Date(year,month, day);
-            newDate.setTime(currentDate.getTime() - element.value * 86400000 );
-            var dateDisplay = (newDate.getMonth() + 1 ) + '/' +newDate.getDate() + '/' + newDate.getFullYear();
+            newDate.setTime(currentDate.getTime() - element.value * 86400000);
+            var dateDisplay = (newDate.getMonth() + 1) + '/' + newDate.getDate() + '/' + newDate.getFullYear();
             $('#' + element.value).text(dateDisplay);            
         });
 
